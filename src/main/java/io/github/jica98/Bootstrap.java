@@ -1,4 +1,4 @@
-package spb.ui.util;
+package io.github.jica98;
 
 import java.util.Iterator;
 import java.util.List;
