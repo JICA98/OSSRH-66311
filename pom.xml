@@ -4,17 +4,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.jica98</groupId>
 	<artifactId>bootstrap-utils</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	
+	<version>0.0.1</version>
+
 	<properties>
 		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<scm>
 		<connection>scm:git:git://github.com/dexecutor/dependent-tasks-executor.git</connection>
 		<developerConnection>scm:git:git@github.com:dexecutor/dexecutor.git</developerConnection>
 		<url>https://github.com/dexecutor/dependent-tasks-executor</url>
-		<tag>HEAD</tag>
+		<tag>bootstrap-utils-0.0.1</tag>
 	</scm>
 
 	<distributionManagement>
@@ -53,7 +55,7 @@
 					<localCheckout>true</localCheckout>
 					<pushChanges>false</pushChanges>
 					<mavenExecutorId>forked-path</mavenExecutorId>
-					<arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
+					<arguments>-Dgpg.passphrase=Kamehameha</arguments>
 				</configuration>
 				<dependencies>
 					<dependency>
@@ -104,8 +106,8 @@
 					</execution>
 				</executions>
 			</plugin>
-			
-			
+
+
 		</plugins>
 	</build>
 
