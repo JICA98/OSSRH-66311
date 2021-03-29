@@ -5,27 +5,57 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class Bootstrap {
-//	https://cdn2.iconfinder.com/data/icons/food-drink-60/50/1F345-tomato-512.png
 	
 	private Bootstrap() {}
 	
-	public static final String CARD = "card";
-	public static final String CARDB = "card-body text-center";
-	public static final String META = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">";
+	protected static final String CARD = "card";
+	protected static final String CARDB = "card-body text-center";
+	
+	
+	/**
+	 * Meta content is
+	 * name='viewport' content='width=device-width initial-scale=1'
+	 * @returns META
+	 */
+	public static final String META = "<meta name='viewport' content='width=device-width, initial-scale=1'>";
+	/**
+	 * Bootstrap v5.0 CSS link
+	 * {@link https://getbootstrap.com/docs/5.0/getting-started/introduction/}
+	 * @returns CSS LINK
+	 */
 	public static final String BS_CSS = "<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl\" crossorigin=\"anonymous\">";
+	/**
+	 * Bootstrap v5.0 JS Bundled link
+	 * {@link https://getbootstrap.com/docs/5.0/getting-started/introduction/}
+	 * @returns JS LINK
+	 */
 	public static final String BS_JS = "<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0\" crossorigin=\"anonymous\"></script>";
 	
-	public static final String HEAD = new StringBuilder()
-			.append("<HEAD>")
-			.append("<TITLE>SpringBoot</TITLE>")
-			.append(META)
-			.append(BS_CSS)
-			.append("<link rel = \"icon\" href='https://dzone.com/storage/temp/12434118-spring-boot-logo.png' type = \"image/x-icon\"> ")
-			.append("</HEAD>")
-			.toString();
 	
-	public static final String navbar() {
-		return navbar("Your Title Here", "/", "", "Home", "/", "Contact Us", "/");
+	/**
+	 * @param content	takes additional content to be attached to the head element
+	 * 
+	 * it adds the meta content and css link by default
+	 * @returns [head]...[/head]
+	 */
+	public static final String head(String meta, String css, String iconLink, String title, String content) {
+		return new StringBuilder()
+				.append("<HEAD>")
+				.append("<TITLE>%s</TITLE>")
+				.append(META)
+				.append(BS_CSS)
+				.append("<link rel = \"icon\" href='' type = \"image/x-icon\"> ")
+				.append(content)
+				.append("</HEAD>")
+				.toString();
+	}
+	
+	public static final String head(String content) {
+		return head(META, BS_CSS, "https://dzone.com/storage/temp/12434118-spring-boot-logo.png", "SpringBoot", content );
+	}
+	
+	public static final String head() {
+		return head("");
 	}
 	
 	public static final String div() {
@@ -396,7 +426,25 @@ public class Bootstrap {
 		return ctx.toString();
 	}
 	
-	
+	/**
+	 * @param title			the title to be added inside navbar-brand
+	 * @param titleLink 	the link to jump when the navbar brand is clicked
+	 * @param classes		use body() to add multiple classes to the navbar or
+	 * a single class like "text-white"
+	 * @param itemsAndLinks		content followed by the link it should jump to
+	 * eg:<blockquote>
+	 * 		- "Home", "/home", "Contact Us", "/contact-us"
+	 * @throws ArrayIndexOutOfBounds Exception if itemsAndLinks length is odd
+	 * 
+	 * @returns String. bootstrap-navbar bg-dark.
+	 * It sets the navbar items as
+	 * <blockquote>
+	 *  - "Your Title Here" 
+	 *  - "Home"
+	 *  - "Contact Us"  
+	 *  -
+	 * <blockquote>
+	 */
 	public static String navbar(String title, String titleLink, String classes, String...itemsAndLinks) {
 		 StringBuilder ctx = new StringBuilder()
 			.append("<NAV CLASS='")
@@ -432,6 +480,22 @@ public class Bootstrap {
 		return ctx.toString();
 	}
 	
+	
+	/**
+	 * 
+	 * @returns String. bootstrap-navbar bg-dark.
+	 * It sets the navbar items as
+	 * <blockquote>
+	 *  - "Your Title Here" 
+	 *  - "Home"
+	 *  - "Contact Us"  
+	 *  -
+	 * <blockquote>
+	 */
+	public static final String navbar() {
+		return navbar("Your Title Here", "/", "", "Home", "/", "Contact Us", "/");
+	}
+	
 	public static final String errorAlert(String errorMessage) {
 		return alert("danger", errorMessage);
 	}
@@ -462,7 +526,7 @@ public class Bootstrap {
 	}
 	
 	public static final String html(String body) {
-		return html(HEAD, body);
+		return html(head(), body);
 	}
 	
 	public static final String darkFooter(String content) {
