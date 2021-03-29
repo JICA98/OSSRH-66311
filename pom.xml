@@ -69,7 +69,7 @@
 					<localCheckout>true</localCheckout>
 					<pushChanges>false</pushChanges>
 					<mavenExecutorId>forked-path</mavenExecutorId>
-					<arguments>-Dgpg.passphrase=Kamehameha</arguments>
+					<arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
 				</configuration>
 				<dependencies>
 					<dependency>
