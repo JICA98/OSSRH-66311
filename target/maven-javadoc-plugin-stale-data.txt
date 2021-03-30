@@ -1,0 +1,24 @@
+cmd.exe
+/X
+/C
+""C:\Program Files\AdoptOpenJDK\jdk-15.0.1.9-openj9\bin\javadoc.exe" @options @packages"
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\allclasses-index.html = 1617094290420
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\allpackages-index.html = 1617094290424
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\constant-values.html = 1617094290237
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\deprecated-list.html = 1617094290307
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\element-list = 1617094290180
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\help-doc.html = 1617094290439
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\index-all.html = 1617094290408
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\index.html = 1617094290430
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\jquery-ui.overrides.css = 1617094290499
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\member-search-index.js = 1617094290401
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\module-search-index.js = 1617094290393
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\options = 1617094286092
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\overview-tree.html = 1617094290290
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\package-search-index.js = 1617094290396
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\packages = 1617094286093
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\script.js = 1617094290454
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\search.js = 1617094290460
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\stylesheet.css = 1617094290450
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\tag-search-index.js = 1617094290403
+C:\data\Projects\Java\bootstrap-utils\target\apidocs\type-search-index.js = 1617094290398
