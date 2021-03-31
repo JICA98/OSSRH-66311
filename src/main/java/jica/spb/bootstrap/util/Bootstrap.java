@@ -5,8 +5,11 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /**
- * @author Jica
- *
+ * @author Jishnu Raj
+ *<p>
+ * Main Bootstrap class for generating the HTML Content
+ * By default this uses the 
+ * 
  */
 public class Bootstrap {
 	
